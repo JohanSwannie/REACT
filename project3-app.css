@@ -41,7 +41,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-#butty {
+#butty1, #butty2 {
   width: 300px;
   color: navy;
   background: olive;
