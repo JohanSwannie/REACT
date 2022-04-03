@@ -49,8 +49,9 @@ body {
   word-break: break-all;
   grid-column: 1 / 5;
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid #000;
-  outline-style: double;
+  border: 10px solid #000;
+  border-style: double;
+  outline-style: groove;
 }
 
 #display > #previous {
