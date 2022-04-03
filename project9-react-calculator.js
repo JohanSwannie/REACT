@@ -10,7 +10,7 @@ class Calculator extends React.Component {
       currNumber: "0"
     };
     this.handleClick = this.handleClick.bind(this);
-    this.determineNumberLimit = this.determineNumberLimit.bind(this);
+    this.displayNumberLimitMessage = this.displayNumberLimitMessage.bind(this);
     this.handleEqual = this.handleEqual.bind(this);
     this.handleClear = this.handleClear.bind(this);
     this.deleteInput = this.deleteInput.bind(this);
@@ -32,7 +32,7 @@ class Calculator extends React.Component {
         });
       }
       else {
-        this.determineNumberLimit();
+        this.displayNumberLimitMessage();
       }
       return;
     }
@@ -70,7 +70,7 @@ class Calculator extends React.Component {
     }
   }
 
-  determineNumberLimit() {
+  displayNumberLimitMessage() {
     const saveCurrNumber = this.state.currNumber;
     this.setState({
       currNumber: "Number limit reached",
