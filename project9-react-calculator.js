@@ -26,7 +26,7 @@ class Calculator extends React.Component {
           currNumber: innerText
         });
       }
-      else if(currNumber.length < 15) {
+      else if(currNumber.length < 20) {
         this.setState({
           currNumber: currNumber + innerText
         });
