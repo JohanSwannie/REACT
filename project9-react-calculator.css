@@ -1,0 +1,71 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-image: radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% );
+  margin: 0;
+  padding: 0;
+  border: 4px solid navy;
+}
+
+#calculator  {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  min-height: 100vh;
+}
+
+#calculator > button {
+  font-size: 34px;
+  border: 1px solid #FFF;
+  background-color:rgba(70, 170, 70, .7);
+  outline: aliceblue;
+  cursor: pointer;
+}
+
+#calculator > button:hover {
+  background-color: rgba(255, 255, 255, .92);
+}
+
+#clear, #equals {
+  grid-column: span 2;
+}
+
+#display {
+  color: #FFF;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 9px;
+  word-wrap: break-word;
+  word-break: break-all;
+  grid-column: 1 / 5;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid gold;
+}
+
+#display > #previous {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#display > #currinput {
+  color: #FFF;
+}
+
+h5 {
+  color: navy;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Zen Tokyo Zoo', cursive;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-column: 1 / 5;
+}
