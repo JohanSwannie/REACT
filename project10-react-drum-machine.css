@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+  min-height: 100vh;
+  font-family: 'Alumni Sans Inline One', cursive;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #452c63;
+  margin: 10px;
+  font-size: 65px;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #452c63, #b29f94);
+  border: 15px solid #FFF;
+  border-style: groove;
+  margin: 10px auto;
+  width: 750px;
+  height: 450px;
+  grid-gap: 3px;
+  opacity: 0.8;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.drum-pad {
+  font-family: 'Ribeye Marrow', cursive;
+  font-size: 44px;
+  background: linear-gradient(145deg, #00007f, #F007FD);
+  width: 90px;
+  height: 90px;
+  border: 2px solid #FFF;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  cursor: pointer;
+  justify-self: center;
+  align-self: center;
+  user-select: none;
+  color: white;
+}
+
+.switch {
+  background: linear-gradient(to bottom, #452c63, #b29f94);
+  isolation: isolate;
+  position: relative;
+  height: 45px;
+  width: 80px;
+  margin-right: 10px;
+  border: 4px solid #FFF;
+  border-radius: 30%;
+  overflow: hidden;
+}
+
+.signal {
+  height: 100%;
+  width: 100%;
+  background: rebeccapurple;
+  border-radius: 30%;
+  transform: translate3d(-70%, 0, 0);
+}
+
+.switch:active~.signal {
+  transform: translate3d(30%, 0, 0);
+}
+
+.frame {
+  font-size: 23px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: bold;
+  display: inline-flex;
+  width: 400px;
+  align-items: center;
+  cursor: pointer;
+  color: #452c63;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.switchMode {
+  display: none;
+}
+
+.switchMode:checked~.signal {
+  transform: translate3d(30%, 0, 0);
+}
+
+#display {
+  font-size: 30px;
+  font-family: 'Gowun Dodum', sans-serif;
+  letter-spacing: 2px;
+  color: #FFF;
+  background: #452c63;
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.restElements {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 50px;
+}
