@@ -754,7 +754,7 @@ class MyComponent extends React.Component {
   }
 };
 
-{/* OPTIMIZE RE-RENDERS WITH SHOULDCOMPONENTUPDATE */}
+{/* OPTIMIZE THE RE-RENDERS WITH SHOULDCOMPONENTUPDATE */}
 
 class OnlyEvens extends React.Component {
   constructor(props) {
