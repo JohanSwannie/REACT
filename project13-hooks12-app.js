@@ -45,7 +45,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch(`https://jsonplaceholder.typicode.com/${resourceType`)
     .then(response => response.json())
     .then(herewego => setItems(herewego));
   }, [resourceType]);
