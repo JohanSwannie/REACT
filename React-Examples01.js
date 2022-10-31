@@ -12,7 +12,7 @@ const JSX = <div>
                 <li>Hello JSX</li>
                 <li>Hello elements</li>
               </ul>
-            </div>;
+            </div>;  
 
 {/* JSX COMMENT */}
 
