@@ -4,7 +4,7 @@ body {
 
 .App {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -32,4 +32,14 @@ h3 {
   padding: 3rem;
   background: darkgoldenrod;
   color: white;
+}
+
+h4 {
+  font-size: 30px;
+  width: 450px;
+  padding: 3rem;
+  background: darkgreen;
+  color: white;
+  border: 9px solid white;
+  border-style: double;
 }
