@@ -1,0 +1,35 @@
+body {
+  background: olive;
+}
+
+.App {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h2 {
+  font-size: 35px;
+  width: 450px;
+  padding: 3rem;
+  background: navy;
+  color: white;
+}
+
+button {
+  font-size: 20px;
+  width: 15rem;
+  height: 5rem;
+  background: black;
+  color: white;
+}
+
+h3 {
+  font-size: 35px;
+  width: 450px;
+  padding: 3rem;
+  background: darkgoldenrod;
+  color: white;
+}
