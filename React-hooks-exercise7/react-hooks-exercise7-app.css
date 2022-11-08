@@ -1,0 +1,16 @@
+body {
+  background: gray;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  color: #FFF;
+  width: 15rem;
+  height: 5rem;
+  background: #000;
+  border: .7rem solid #FFF;
+  border-style: double;
+}
