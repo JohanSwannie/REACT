@@ -14,6 +14,8 @@ export default function App() {
     renderAmount.current = renderAmount.current + 1;
     if (renderAmount.current % 2 === 0) {
       h22.current.style.color = "black";
+    } else {
+      h22.current.style.color = "red";
     }
   });
 
@@ -23,7 +25,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    prevJobDescription.current = jobDescription ;
+    prevJobDescription.current = jobDescription;
   }, [jobDescription]);
 
   return (
