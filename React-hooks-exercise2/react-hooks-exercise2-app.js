@@ -7,6 +7,7 @@ function App() {
   const [windowOuterWidth, setWindowOuterWidth] = useState(window.outerWidth);
   const [windowOuterHeight, setWindowOuterHeight] = useState(window.outerHeight);
   const [windowDocument, setWindowDocument] = useState(window.document.URL);
+  const [counter, setCounter] = useState(0);
 
   const handleWindowChange = () => {
     setWindowWidth(window.innerWidth);
@@ -14,6 +15,7 @@ function App() {
     setWindowOuterWidth(window.outerWidth);
     setWindowOuterHeight(window.outerHeight);
     setWindowDocument(window.document.URL);
+    setCounter(prevCounter => prevCounter + 1);
   };
 
   useEffect(() => {
@@ -30,6 +32,7 @@ function App() {
       <p style={{background: "gray"}}>Window Outer Width: {windowOuterWidth}</p>
       <p style={{background: "peachpuff"}}>Window Outer Height: {windowOuterHeight}</p>
       <p style={{background: "lightgreen"}}>Window Document: {windowDocument}</p>
+      <p style={{color: '#FFF', background: "black"}}>Window Size has now changed {counter} times</p>
     </div>
   );
 }
