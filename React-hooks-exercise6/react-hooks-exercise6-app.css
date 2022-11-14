@@ -10,7 +10,18 @@
 }
 
 button {
-  color: #FFF;
+  color: #000;
   width: 15rem;
   height: 5rem;
 }
+
+.cntr {
+  width: 10%;
+  height: 3rem;
+  line-height: 3;
+  margin-left: 45%;
+  margin-right: 45%;
+  background: #000;
+  color: #FFF;
+}
+
