@@ -18,7 +18,6 @@ import React, { useState, useRef } from "react";
    const sportChoice = ['Rugby', 'Cricket', 'Football', 'Netball', 'Baseball', 'Basketball',
                         'Swimming', 'Gymnastics', 'Athletics', 'Tennis', 'Tabletennis', 'Wrestling',
                         'Boxing', 'Skiing', 'Volleyball'];
-
    const changeSurname = () => {
      changeCounter.current = changeCounter.current + 1;
      if (changeCounter.current % 2 === 0) {
@@ -26,6 +25,7 @@ import React, { useState, useRef } from "react";
        h2Ref.current.style.background = "crimson";
        h3Ref.current.style.border = "10px solid white";
        h3Ref.current.style.borderStyle = "double";
+       setSport(sportChoice[Math.floor(Math.random() * sportChoice.length)]);
      } else {
        setSurname('Brown');
        h2Ref.current.style.background = "navy";
@@ -44,4 +44,4 @@ import React, { useState, useRef } from "react";
   );
 }
 
-export default App; 
+export default App;
