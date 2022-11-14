@@ -7,14 +7,18 @@ export const ThemeContext = React.createContext();
 
 export default function App() {
   const [darkTheme, setDarkTheme] = useState(true);
+  const [counter, setCounter] = useState(0);
   function toggleTheme() {
     setDarkTheme(prevDarkTheme => !prevDarkTheme);
+    setCounter(prevCounter => prevCounter + 1);
     if (darkTheme) {
       document.body.style.backgroundColor = 'lightseagreen';
       document.getElementById('butty').style.backgroundColor = 'navy';
+      document.getElementById('butty').style.color = 'white';
     } else {
       document.body.style.backgroundColor = 'steelblue';
       document.getElementById('butty').style.backgroundColor = 'skyblue';
+      document.getElementById('butty').style.color = 'black';
     }
   }
   return (
@@ -22,6 +26,7 @@ export default function App() {
       <ThemeContext.Provider value={darkTheme} >
       <div className="wrapper">
         <button id='butty' onClick={toggleTheme}>Toggle Theme</button>
+        <p className='cntr'>{counter}</p>
         <FunctionComponentWithContext />
         <ClassComponentWithContext />
       </div>
