@@ -26,7 +26,7 @@ export default function App() {
       <ThemeContext.Provider value={darkTheme} >
       <div className="wrapper">
         <button id='butty' onClick={toggleTheme}>Toggle Theme</button>
-        <p className='cntr'>{counter}</p>
+        <p className='cntr'>Toggle Counter = {counter}</p>
         <FunctionComponentWithContext />
         <ClassComponentWithContext />
       </div>
