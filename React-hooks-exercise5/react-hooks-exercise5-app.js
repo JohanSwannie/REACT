@@ -8,7 +8,9 @@ export default function App() {
   const [message, setMessage] = useState('');
   const messages = ['important', 'urgent', 'for all ages', 'for all children',
                     'for people older than 75', 'for all citizens',
-                    'for people that are poor', 'for people that are rich'];
+                    'for people that are poor', 'for people that are rich',
+                    'for people that enjoy nature', 'for people that are blind',
+                    'for people with diabetes', 'for people with heart problems'];
 
   const tripleCount = useMemo(() => {
     return tripleTheCount(counter);
@@ -22,7 +24,7 @@ export default function App() {
 
   const styleOfBox = useMemo(() => {
     return {
-      backgroundColor: darkTheme ? '#000' : '#FFF',
+      backgroundColor: darkTheme ? '#000' : 'darkkhaki',
       color: darkTheme ? '#FFF' : '#000'
     };
   }, [darkTheme]);
@@ -38,10 +40,8 @@ export default function App() {
       <button onClick={() => setDarkTheme(prevDarkTheme => !prevDarkTheme)}>Change the Theme</button><br></br>
       <button onClick={() => setMessage(messages[Math.floor(Math.random() * messages.length)])}>Change the Message</button><br></br>
       <button onClick={setMousePointer}>Set Mouse Pointer</button><br></br>
-      <div className="h2frame">
-        <h2 style={styleOfBox}>{tripleCount}</h2>
-        <h3>Message is {message}</h3>
-      </div>
+      <h2 style={styleOfBox}>{tripleCount}</h2>
+      <h3>Message is {message}</h3>
     </div>
   );
 }
