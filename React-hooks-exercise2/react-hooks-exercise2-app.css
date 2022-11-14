@@ -3,6 +3,8 @@
 }
 
 p {
+  color: #000;
+  font-weight: bold;
   width: 30%;
   line-height: 5;
   border: 1.5px solid rebeccapurple;
