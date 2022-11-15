@@ -5,7 +5,8 @@ const ACTIONS = {
   ADDONE: 'addone',
   SUBTRACTONE: 'subtractone',
   ADDFIVE: 'addfive',
-  SUBTRACTFIVE: 'subtractfive'
+  SUBTRACTFIVE: 'subtractfive',
+  RESETCOUNT: 'resetcount'
 };
 
 function reducer(state, action) {
@@ -18,6 +19,8 @@ function reducer(state, action) {
       return {count: state.count + 5 };
     case ACTIONS.SUBTRACTFIVE:
       return {count: state.count - 5 };
+    case ACTIONS.RESETCOUNT:
+      return {count: 0 };
     default:
       return state.count;
   }
@@ -41,12 +44,17 @@ export default function App() {
     function subtractFive() {
       dispatch({ type: ACTIONS.SUBTRACTFIVE });
     }
+
+    function resetCount() {
+      dispatch({ type: ACTIONS.RESETCOUNT });
+    }
   return (
     <div className="App">
-      <button onClick={addOne}>Add One</button>
-      <button onClick={subtractOne}>Subtract One</button><br></br>
-      <button onClick={addFive}>Add Five</button>
-      <button onClick={subtractFive}>Subtract Five</button>
+      <button onClick={addOne}>Add 1</button>
+      <button onClick={subtractOne}>Subtract 1</button><br></br>
+      <button onClick={addFive}>Add 5</button>
+      <button onClick={subtractFive}>Subtract 5</button><br></br>
+      <button onClick={resetCount}>Reset</button>
       <p style={{color: '#fff', fontSize: '40px', fontWeight: 'bold'}}> The Counter is now : {state.count} </p>
     </div>
   );
