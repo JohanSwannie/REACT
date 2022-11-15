@@ -6,7 +6,7 @@ const ACTIONS = {
   SUBTRACTONE: 'subtractone',
   ADDFIVE: 'addfive',
   SUBTRACTFIVE: 'subtractfive'
-}
+};
 
 function reducer(state, action) {
   switch(action.type) {
@@ -44,7 +44,7 @@ export default function App() {
   return (
     <div className="App">
       <button onClick={addOne}>Add One</button>
-      <button onClick={subtractOne}>Subtract One</button>
+      <button onClick={subtractOne}>Subtract One</button><br></br>
       <button onClick={addFive}>Add Five</button>
       <button onClick={subtractFive}>Subtract Five</button>
       <p style={{color: '#fff', fontSize: '40px', fontWeight: 'bold'}}> The Counter is now : {state.count} </p>
