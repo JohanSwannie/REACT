@@ -11,7 +11,7 @@ export const ACTIONS = {
 function reducer(executions, action) {
   switch (action.type) {
     case ACTIONS.ADD_EXECUTION:
-      return [...executions, newTodo(action.loading.name)];
+      return [...executions, newExecution(action.loading.name)];
     case ACTIONS.TOGGLE_EXECUTION:
       return executions.map(execution => {
         if (execution.id === action.loading.id) {
@@ -26,7 +26,7 @@ function reducer(executions, action) {
   }
 }
 
-function newTodo(name) {
+function newExecution(name) {
   return { id: Date.now(), name: name, done: false };
 }
 
