@@ -46,7 +46,7 @@ export default function App() {
         <input type="text" value={name} placeholder="Enter Name" onChange={event => setName(event.target.value)} />
       </form>
         {executions.map(execution => {
-          return <Todo key={execution.id} execution={execution} dispatch={dispatch} />
+          return <Execution key={execution.id} execution={execution} dispatch={dispatch} />
       })}
     </div>
   );
