@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import DisplayArray from './DisplayArray';
 import './App.css';
 
@@ -6,13 +6,14 @@ export default function App() {
   const [digit, setDigit] = useState(1);
   const [darkTheme, setDarkTheme] = useState(false);
 
-  const setDigits = () => {
+  const setDigits = useCallback((multiplier) => {
     if (!isNaN(digit) && digit > 0) {
-      return [digit, digit * 2, digit * 3, digit * 4, digit * 5, digit * 6, digit * 7, digit * 8];
+      return [digit, digit * multiplier, (digit * 2) * multiplier, (digit * 4)  * multiplier,
+              (digit * 6) * multiplier, (digit * 8) * multiplier, (digit * 10) * multiplier];
     } else {
       return ['Enter a valid Numeric value please!'];
     }
-  };
+  }, [digit]);
 
   const setThemeStyle = {
     color: darkTheme ? '#FFF' : '#000',
