@@ -1,0 +1,13 @@
+body {
+  background: aqua;
+}
+
+.App {
+  text-align: center;
+}
+
+input {
+  background: crimson;
+  color: #FFF;
+  font-weight: bold;
+}
