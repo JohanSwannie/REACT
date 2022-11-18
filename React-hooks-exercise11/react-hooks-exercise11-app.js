@@ -6,7 +6,7 @@ export default function App() {
   const [myInput, setMyInput] = useState('');
   const [array, setArray] = useState([]);
 
-  const ARRAY_LENGTH = 10000;
+  const ARRAY_LENGTH = 50000;
 
   function handleChange(event) {
     event.preventDefault();
@@ -21,10 +21,10 @@ export default function App() {
   }
   return (
     <div className="App">
-      <input type="text" value={myInput} onChange={handleChange} />
-      {isPending ? "Input Loading..."
+      <input type="text" value={myInput} autoFocus onChange={handleChange} />
+      {isPending ? " Input Loading..."
        : array.map((element, index) => {
-         return <div key={index} style={{fontSize: '40px', color: 'red', fontFamily: 'Tangerine'}}>{element}</div>
+         return <div key={index} style={{fontSize: '60px', color: 'red', fontFamily: 'Tangerine'}}>{element}</div>
        })}
     </div>
   );
