@@ -67,7 +67,7 @@ const App = () => {
       </div>
         <h5>{resourceType}</h5>
         {items.map(item => { return <pre key={item}>{JSON.stringify(item)}</pre> })}
-        <p style={{fontSize: "18px"}}>Swanneman Learns React Hooks</p>
+        <p style={{color: "navy", fontSize: "4.5rem", fontFamily: "Tangerine"}}>Swanneman Learns React Hooks</p>
     </div>
   );
 }
