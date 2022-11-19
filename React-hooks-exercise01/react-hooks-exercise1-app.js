@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function countInit() {
-  return 50;
+  const array1 = [4, 22, 99, 3, 75, 35, 50, 17, 9, 61, 48, 28, 44, 13, 7, 39, 25, 73, 37, 31, 10, 88];
+  return array1[Math.floor(Math.random() * array1.length)];
 }
 
 const App = () => {
