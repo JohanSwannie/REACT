@@ -73,7 +73,7 @@ class TicTacToeGame extends React.Component {
         }
       ],
       playAmount: 0,
-      stellieIsNextToPlay: true
+      maryIsNextToPlay: true
     };
   }
 
@@ -84,7 +84,7 @@ class TicTacToeGame extends React.Component {
     if (determineTheChampion(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.stellieIsNextToPlay ? "Mary" : "Peter";
+    squares[i] = this.state.maryIsNextToPlay ? "Mary" : "Peter";
     this.setState({
       history: history.concat([
         {
@@ -92,14 +92,14 @@ class TicTacToeGame extends React.Component {
         }
       ]),
       playAmount: history.length,
-      stellieIsNextToPlay: !this.state.stellieIsNextToPlay
+      maryIsNextToPlay: !this.state.maryIsNextToPlay
     });
   }
 
   jumpTo(playNumber) {
     this.setState({
       playAmount: playNumber,
-      stellieIsNextToPlay: (playNumber % 2) === 0
+      maryIsNextToPlay: (playNumber % 2) === 0
     });
   }
 
@@ -129,7 +129,7 @@ class TicTacToeGame extends React.Component {
     } else if (this.state.playAmount === 9) {
       status = "The Game is a DRAW ! - Click Restart to play again";
     } else {
-      status = "The next player to Play is : " + (this.state.stellieIsNextToPlay ? "Mary" : "Peter");
+      status = "The next player to Play is : " + (this.state.maryIsNextToPlay ? "Mary" : "Peter");
     }
 
     return (
