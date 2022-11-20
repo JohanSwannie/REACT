@@ -11,19 +11,17 @@ body {
 }
 
 .box {
+  float: left;
+  width: 10rem;
+  height: 10rem;
+  padding: 0;
   color: #FFF;
   background: steelblue;
   border: 4.2px solid #999;
   border-style: double;
-  float: left;
   font-size: 22px;
   font-weight: bold;
   line-height: 34px;
-  width: 10rem;
-  height: 10rem;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
   text-align: center;
 }
 
