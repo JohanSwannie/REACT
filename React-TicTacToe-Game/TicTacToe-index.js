@@ -23,7 +23,7 @@ function determineTheChampion(squares) {
   ];
   for (let i = 0; i < lines.length; i++) {
     const [x, y, z] = lines[i];
-    if (squares[x] === squares[y] && squares[x] === squares[z]) {
+    if (squares[x] && squares[x] === squares[y] && squares[x] === squares[z]) {
       return squares[x];
     }
   }
