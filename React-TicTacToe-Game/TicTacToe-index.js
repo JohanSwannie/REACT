@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
@@ -30,7 +30,7 @@ function determineTheChampion(squares) {
   return null;
 }
 
-class Board extends React.Component {
+class Board extends Component {
   giveNumberToBlock(i) {
     return (
       <Block
@@ -63,7 +63,7 @@ class Board extends React.Component {
   }
 }
 
-class TicTacToeGame extends React.Component {
+class TicTacToeGame extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -96,7 +96,7 @@ class TicTacToeGame extends React.Component {
     });
   }
 
-  jumpTo(playNumber) {
+  skip(playNumber) {
     this.setState({
       playAmount: playNumber,
       maryIsNextToPlay: (playNumber % 2) === 0
@@ -104,7 +104,7 @@ class TicTacToeGame extends React.Component {
   }
 
   restartGame() {
-    window.location.reload(false);
+    window.location.reload();
   }
 
   render() {
@@ -118,7 +118,7 @@ class TicTacToeGame extends React.Component {
         'The Game starts NOW!';
       return (
         <li key={move}>
-          <button style={{width: '14rem', border: '1.5px solid #FFF', color: '#FFF', backgroundColor: 'navy', fontWeight: 'bold', padding: '.55rem'}} onClick={() => this.jumpTo(move)}>{moveDescription}</button>
+          <button style={{width: '14rem', border: '1.5px solid #FFF', color: '#FFF', backgroundColor: 'navy', fontWeight: 'bold', padding: '.55rem'}} onClick={() => this.skip(move)}>{moveDescription}</button>
         </li>
       );
     });
