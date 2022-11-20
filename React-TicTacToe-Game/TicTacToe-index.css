@@ -1,0 +1,47 @@
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  background: #B22222;
+}
+
+.box_row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.box {
+  color: #FFF;
+  background: steelblue;
+  border: 4.2px solid #999;
+  border-style: double;
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 12rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 12rem;
+}
+
+.tic_Tac_Toe_Game {
+  display: flex;
+  flex-direction: row;
+}
+
+.information_detail {
+  margin-left: 3rem;
+}
+
+#restartGame {
+  width: 10rem;
+  height: 4rem;
+  margin-left: 2rem;
+  background: navy;
+  color: #FFF;
+  font-weight: bold;
+  border: 2px solid white;
+}
