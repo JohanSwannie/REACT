@@ -23,8 +23,8 @@ export default function App() {
     <div className="App">
       <input type="text" value={myInput} autoFocus onChange={handleChange} />
       {isPending ? " Input Loading..."
-       : array.map((element, index) => {
-         return <div key={index} style={{fontSize: '60px', color: 'red', fontFamily: 'Tangerine'}}>{element}</div>
+       : array.map((element, idx) => {
+         return <div key={idx} style={{fontSize: '62px', color: 'red', fontFamily: 'Tangerine'}}>{element}</div>
        })}
     </div>
   );
