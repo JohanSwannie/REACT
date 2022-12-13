@@ -1,8 +1,8 @@
 import { BiSearch, BiCaretDown, BiCheck } from 'react-icons/bi';
 import { useState } from 'react';
 
-const DropDownMenu = ({ toggle, orderBy, onOrderByChange, sortBy, onSortByChange }) => {
-  if (!toggle) {
+const DropDownMenu = ({ toggleSort, orderBy, onOrderByChange, sortBy, onSortByChange }) => {
+  if (!toggleSort) {
     return null;
   }
   return (
@@ -18,18 +18,18 @@ const DropDownMenu = ({ toggle, orderBy, onOrderByChange, sortBy, onSortByChange
         <div onClick={() => onSortByChange('companyStartDate')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer"
           role="menuitem">Company Start Date {(sortBy === 'companyStartDate') && <BiCheck />}</div>
-        <div onClick={() => onOrderByChange('asc')}
+        <div onClick={() => onOrderByChange('Asc')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer border-gray-1 border-t-2"
-          role="menuitem">Asc {(orderBy === 'asc') && <BiCheck />}</div>
-        <div onClick={() => onOrderByChange('desc')}
+          role="menuitem">Asc {(orderBy === 'Asc') && <BiCheck />}</div>
+        <div onClick={() => onOrderByChange('Desc')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer"
-          role="menuitem">Desc {(orderBy === 'desc') && <BiCheck />}</div>
+          role="menuitem">Desc {(orderBy === 'Desc') && <BiCheck />}</div>
       </div>
     </div>
   )
 }
 
-const SearchCompanies = ({ searchQuery, onSeacrhQueryChange, orderBy, onOrderByChange, sortBy, onSortByChange }) => {
+const SearchCompanies = ({ searchQuery, onSearchQueryChange, orderBy, onOrderByChange, sortBy, onSortByChange }) => {
   let [toggleSort, setToggleSort] = useState(false);
   return (
     <div className="py-5">
@@ -39,7 +39,7 @@ const SearchCompanies = ({ searchQuery, onSeacrhQueryChange, orderBy, onOrderByC
           <label htmlFor="searchQuery" className="sr-only" />
         </div>
         <input type="text" name="searchQuery" id="searchQuery" value={searchQuery}
-        onChange={(event) => {onSeacrhQueryChange(event.target.value)}}
+        onChange={(event) => {onSearchQueryChange(event.target.value)}}
           className="pl-8 rounded-md focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300" placeholder="Search" />
         <div className="absolute inset-y-0 right-0 flex items-center">
           <div>
@@ -47,7 +47,7 @@ const SearchCompanies = ({ searchQuery, onSeacrhQueryChange, orderBy, onOrderByC
               className="justify-center px-4 py-2 bg-blue-400 border-2 border-blue-400 text-sm text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 flex items-center" id="options-menu" aria-haspopup="true" aria-expanded="true">
               Sort By <BiCaretDown className="ml-2" />
             </button>
-            <DropDownMenu toggle={toggleSort}
+            <DropDownMenu toggleSort={toggleSort}
             orderby={orderBy}
             onOrderByChange={newSortOrder => onOrderByChange(newSortOrder)}
             sortBy={sortBy}
