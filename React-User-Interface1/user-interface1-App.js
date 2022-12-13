@@ -4,25 +4,26 @@ import SearchCompanies from './components/SearchCompanies';
 import AddCompany from './components/AddCompany';
 import CompanyInfo from './components/CompanyInfo';
 
-function App() {
+export default function App() {
   let [companyDetailList, setCompanyDetailList] = useState([]);
-  let [searchquery, setSearchQuery] = useState("");
+  let [searchQuery, setSearchQuery] = useState("");
   let [sortBy, setSortBy] = useState("companyName");
-  let [orderBy, setOrderBy] = useState("asc");
+  let [orderBy, setOrderBy] = useState("Asc");
 
   const filteredCompanyDetails = companyDetailList.filter(
     item => {
       return (
-        item.companyName.toLowerCase().includes(searchquery.toLowerCase()) ||
-        item.CEO.toLowerCase().includes(searchquery.toLowerCase()) ||
-        item.companyLocation.toLowerCase().includes(searchquery.toLowerCase())
+        item.companyName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.CEO.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.companyLocation.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
   ).sort((a, b) => {
-    let order = (orderBy === "asc") ? 1: -1;
+    let order = (orderBy === "Asc") ? 1: -1;
     return (
       a[sortBy].toLowerCase() < b[sortBy].toLowerCase() ? -1 * order : 1 * order
     );
+
   });
 
   const fetchData = useCallback(() => {
@@ -41,15 +42,16 @@ function App() {
     <div className="App container mx-auto mt-3 font-thin">
       <h1 className="text-5xl mb-3 main_heading">
         <FaBuilding className=" inline-block align-top" />
-         Top Ranked IT Companies - Details
-        <FaBuilding className=" inline-block align-top" /></h1>
+        Top Ranked IT Companies - Details
+        <FaBuilding className=" inline-block align-top" />
+      </h1>
       <AddCompany
         onDispatchCompanyInfo={newCompany => setCompanyDetailList([...companyDetailList, newCompany])}
         lastId={companyDetailList.reduce((max, nextId ) => Number(nextId.id) > max ? Number(nextId.id) : max, 0)}
        />
-      <SearchCompanies searchquery={searchquery}
-      onSeacrhQueryChange={mySearchQuery => setSearchQuery(mySearchQuery)}
-      orderby={orderBy}
+      <SearchCompanies searchQuery={searchQuery}
+      onSearchQueryChange={mySearchQuery => setSearchQuery(mySearchQuery)}
+      orderBy={orderBy}
       onOrderByChange={newSortOrder => setOrderBy(newSortOrder)}
       sortBy={sortBy}
       onSortByChange={newSort => setSortBy(newSort)}
@@ -70,5 +72,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
