@@ -20,7 +20,7 @@ const DropDownMenu = ({ toggle, orderBy, onOrderByChange, sortBy, onSortByChange
           role="menuitem">Company Start Date {(sortBy === 'companyStartDate') && <BiCheck />}</div>
         <div onClick={() => onOrderByChange('asc')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer border-gray-1 border-t-2"
-          role="menuitem">Asc {(orderBy === 'ceo') && <BiCheck />}</div>
+          role="menuitem">Asc {(orderBy === 'asc') && <BiCheck />}</div>
         <div onClick={() => onOrderByChange('desc')}
           className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex justify-between cursor-pointer"
           role="menuitem">Desc {(orderBy === 'desc') && <BiCheck />}</div>
