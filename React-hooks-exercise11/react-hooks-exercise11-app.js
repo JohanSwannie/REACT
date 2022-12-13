@@ -1,7 +1,7 @@
 import React, { useState, useTransition } from 'react';
 import './App.css';
 
-export default function App() {
+function App() {
   const [isPending, startTransition] = useTransition();
   const [myInput, setMyInput] = useState('');
   const [array, setArray] = useState([]);
@@ -29,3 +29,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
