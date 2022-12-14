@@ -35,7 +35,7 @@ const SearchCompanies = ({ searchQuery, onSearchQueryChange, orderBy, onOrderByC
     <div className="py-5">
       <div className="mt-1 relative rounded-md shadow-sm">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <BiSearch />
+          <BiSearch style={{fontSize: "18px"}}/>
           <label htmlFor="searchQuery" className="sr-only" />
         </div>
         <input type="text" name="searchQuery" id="searchQuery" value={searchQuery}
