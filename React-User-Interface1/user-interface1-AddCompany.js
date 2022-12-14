@@ -34,7 +34,7 @@ const AddCompany = ({onDispatchCompanyInfo, lastId}) => {
     <button onClick={() => {setToggleAddCompany(!toggleAddCompany)}}
       className={`bg-gradient-to-r from-cyan-500 to-blue-500 shadow-xl text-white px-2 py-3 w-full text-left rounded-t-md
         ${toggleAddCompany ? 'rounded-t-md': 'rounded-md'}`}>
-      <div><BiCalendarPlus className="inline-block align-text-top" />  Add Company</div>
+      <div className="text-base font-bold"><BiCalendarPlus className="inline-block align-text-top text-2xl font-bold" />  Add a new company</div>
     </button>
     {
       toggleAddCompany &&
