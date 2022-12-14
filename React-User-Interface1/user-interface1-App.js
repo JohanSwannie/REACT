@@ -26,7 +26,7 @@ export default function App() {
 
   });
 
-  const fetchData = useCallback(() => {
+  const fetchInputData = useCallback(() => {
     fetch('./inputdata.json')
     .then(response => response.json())
     .then(data => {
@@ -35,8 +35,8 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    fetchInputData();
+  }, [fetchInputData]);
 
   return (
     <div className="App container mx-auto mt-3 font-thin">
