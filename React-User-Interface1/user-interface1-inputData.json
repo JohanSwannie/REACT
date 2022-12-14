@@ -74,7 +74,7 @@
     "companyName": "North Tech Solutions",
     "CEO": "Andrew Wilcox",
     "companyLocation": "Glasgow, Scotland",
-    "companyStartDate": "2002-12-11 7:45"
+    "companyStartDate": "2002-12-11 07:45"
   },
   {
     "id": "11",
@@ -130,7 +130,7 @@
     "companyName": "Aspen",
     "CEO": "Julia Lowry",
     "companyLocation": "Johannesburg, South Africa",
-    "companyStartDate": "1994-05-01 8:00"
+    "companyStartDate": "1994-05-01 08:00"
   },
   {
     "id": "19",
@@ -165,7 +165,7 @@
     "companyName": "Strategic Solutions",
     "CEO": "Carl Connoway",
     "companyLocation": "Houstan, USA",
-    "companyStartDate": "2015-01-09 9:00"
+    "companyStartDate": "2015-01-09 09:00"
   },
   {
     "id": "24",
@@ -173,5 +173,12 @@
     "CEO": "Oscar Wild",
     "companyLocation": "Athens, Greece",
     "companyStartDate": "1996-12-12 14:00"
+  },
+  {
+    "id": "25",
+    "companyName": "Brilliant Problems Solvers",
+    "CEO": "Rikus Hattingh",
+    "companyLocation": "Cape Town, South Africa",
+    "companyStartDate": "1998-03-01 09:00"
   }
 ]
