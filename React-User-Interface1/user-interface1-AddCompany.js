@@ -21,8 +21,9 @@ const AddCompany = ({onDispatchCompanyInfo, lastId}) => {
       companyName: inputData.companyName,
       CEO: inputData.CEO,
       companyLocation: inputData.companyLocation,
-      companyStatDate: inputData.companyStartDate + ' ' + inputData.startTime
+      companyStartDate: inputData.companyStartDate + ' '  + inputData.startTime
     };
+
     onDispatchCompanyInfo(companyInfo);
     setInputData(initialiseInputData);
     setToggleAddCompany(!toggleAddCompany);
