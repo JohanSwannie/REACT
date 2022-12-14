@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: #F1F1F1;
+  background-image: url('https://img.glyphs.co/img?src=aHR0cHM6Ly9zMy5tZWRpYWxvb3QuY29tL2Jsb2ctaW1hZ2VzLzUtRGlmZmVyZW50LVdheXMtdG8tQ3JlYXRlLWEtQmVhdXRpZnVsLUNvbG9yZnVsLUJhY2tncm91bmQvcG9zdC1oZWFkZXIuanBnP210aW1lPTIwMTkwMjI1MTU1NTQw&q=85&enlarge=true&h=800&w=1200');
   opacity: .9;
+}
+
+.App {
+  background: lightyellow;
+  padding: 2rem 5rem;
+  border: 10px solid #070707;
+  border-style: double;
 }
 
 .main_heading {
