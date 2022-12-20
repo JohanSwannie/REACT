@@ -41,13 +41,14 @@ export default function App() {
   return (
     <div className="App container mx-auto mt-3 font-thin">
       <h1 className="text-5xl mb-3 main_heading">
-        <FaBuilding className=" inline-block align-top" style={{fontSize:'75px'}} />
+        <FaBuilding className=" inline-block align-top" style={{color: 'chocolate', fontSize:'75px'}} />
         Top Ranked IT Companies - Details
-        <FaBuilding className="inline-block align-top" style={{fontSize:'75px'}} />
+        <FaBuilding className="inline-block align-top" style={{color: 'chocolate', fontSize:'75px'}} />
       </h1>
       <AddCompany
-        onDispatchCompanyInfo={newCompany => setCompanyDetailList([...companyDetailList, newCompany])}
         lastId={companyDetailList.reduce((max, nextId ) => Number(nextId.id) > max ? Number(nextId.id) : max, 0)}
+        onDispatchCompanyInfo={newCompany =>
+        newCompany.companyName !== "No Details" ? setCompanyDetailList([...companyDetailList, newCompany]) : alert('New Company Details Not Fully Completed')}
        />
       <SearchCompanies searchQuery={searchQuery}
       onSearchQueryChange={mySearchQuery => setSearchQuery(mySearchQuery)}
