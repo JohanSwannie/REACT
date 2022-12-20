@@ -38,11 +38,11 @@ const AddCompany = ({
       setToggleAddCompany(!toggleAddCompany);
     } else {
       companyInfo = {
-        id: lastId + 1,
+        id: '',
         companyName: 'No Details',
-        CEO: ' ',
-        companyLocation: ' ',
-        companyStartDate: ' '
+        CEO: '',
+        companyLocation: '',
+        companyStartDate: ''
       };
     }
     onDispatchCompanyInfo(companyInfo);
@@ -80,6 +80,7 @@ const AddCompany = ({
       input type = "text"
       name = "CEO"
       id = "CEO"
+      autoFocus
       onChange = {
         (event) => {
           setInputData({
