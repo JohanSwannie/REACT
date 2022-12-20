@@ -44,6 +44,7 @@ const AddCompany = ({
         companyLocation: '',
         companyStartDate: ''
       };
+      document.getElementById('CEO').focus();
     }
     onDispatchCompanyInfo(companyInfo);
   }
