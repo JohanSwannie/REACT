@@ -22,9 +22,20 @@
   font-size: 2.4rem;
 }
 
-.hooks1, .hooks2, .hooks3, .hooks4 {
+.hooks1, .hooks2, .hooks3 {
   width: 50vw;
   height: 100vh;
+  font-size: 20px;
+  border: 4px solid #000;
+  outline: 10px solid #FFF;
+  outline-style: double;
+  color: #FFF;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hooks4 {
+  width: 90vw;
   font-size: 20px;
   border: 4px solid #000;
   outline: 10px solid #FFF;
@@ -47,7 +58,7 @@
   }
 
 .hooks4 {
-  background: orange;
+  background: steelblue;
   }
 
 input, button {
@@ -67,4 +78,8 @@ button {
 hr {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+li {
+  line-height: 7;
 }
