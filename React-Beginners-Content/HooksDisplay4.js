@@ -14,7 +14,7 @@ const HooksDisplay4 = () => {
   return (
     <div className='hooks4'>
       <h2>Hooks Display 4</h2>
-      <h3>{data}</h3>
+      <h3>{data}</h3>  
     </div>
   )
 };
