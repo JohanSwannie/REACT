@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.freekeyboard {
+  display: flex;
+  font-size: 2.4rem;
+}
+
+.hooks1, .hooks2, .hooks3, .hooks4 {
+  width: 50vw;
+  height: 100vh;
+  font-size: 20px;
+  border: 4px solid #000;
+  outline: 10px solid #FFF;
+  outline-style: double;
+  color: #FFF;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hooks1 {
+  background: navy;
+  }
+
+.hooks2 {
+  background: crimson;
+  }
+
+.hooks3 {
+  background: lime;
+  }
+
+.hooks4 {
+  background: orange;
+  }
+
+input, button {
+  font-size: 1.25rem;
+}
+
+input {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+button {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
