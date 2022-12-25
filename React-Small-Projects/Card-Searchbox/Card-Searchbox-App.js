@@ -1,5 +1,5 @@
-import Card-SearchBox-CardList from "./Card-Searchbox-CardList";
-import Card-SearchBox-SearchBox from "./Card-Searchbox-SearchBox";
+import Card-Searchbox-CardList from "./Card-Searchbox-CardList";
+import Card-Searchbox-SearchBox from "./Card-Searchbox-SearchBox";
 import { useState, useEffect } from "react";
 
 const Card-Searchbox-App = () => {
