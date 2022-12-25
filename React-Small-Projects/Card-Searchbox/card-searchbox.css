@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: linear-gradient(to right, rgba(107, 110, 148, 0.8), lightskyblue);
+}
+
+.search-box {
+  width: 20rem;
+  height: 2rem;
+  color: #000;
+  border: 2px solid #000;
+  outline: 5px solid rebeccapurple;
+  outline-style: double;
+  background: rgba(220, 200, 255, 0.9);
+  margin-bottom: 1.5rem;
+}
+
+.card-list {
+  width: 85vw;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem 1.25rem;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  height: 18rem;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  background-color: rgba(200, 68, 200, 0.5);
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  border: 3px solid #5f5f5f;
+  cursor: pointer;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.card-container:hover {
+  transform: scale(1.10);
+}
+
+h1 {
+  font-family: 'Stint Ultra Condensed', cursive;
+  color: rebeccapurple;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+img {
+  width: 10rem;
+  height: 8rem;
+}
