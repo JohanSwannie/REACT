@@ -78,7 +78,9 @@ export default function App() {
         <button  onClick={() => setResourceType('comments')}>Comments</button>
       </div>
         <h5>{resourceType}</h5>
-        {items.map(item => { return <pre key={item}>{JSON.stringify(item)}</pre> })}
+        {items.map(item => { 
+          return <pre key={item}>{JSON.stringify(item)}</pre> 
+        })}
         <p style={{color: "navy", fontSize: "4rem", fontFamily: "Tangerine"}}>Swanneman Learns React Hooks</p>
     </div>
   );
