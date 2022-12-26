@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './App.css';
 
-function App() {
+export default function App() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowOuterWidth, setWindowOuterWidth] = useState(window.outerWidth);
@@ -22,7 +21,7 @@ function App() {
     window.addEventListener('resize', handleWindowChange);
     return () => {
       window.removeEventListener('resize', handleWindowChange);
-    }
+    };
   }, []);
 
   return (
@@ -36,5 +35,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
