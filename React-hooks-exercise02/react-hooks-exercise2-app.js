@@ -26,8 +26,8 @@ export default function App() {
 
   return (
     <div className="App" style={{background: "lightyellow", height: "95vh", border: "10px solid #000", borderStyle: "double"}}>
-      <p style={{background: "skyblue"}}>Window Width: {windowWidth}</p>
-      <p style={{background: "crimson"}}>Window Height: {windowHeight}</p>
+      <p style={{background: "skyblue"}}>Window Inner Width: {windowWidth}</p>
+      <p style={{background: "crimson"}}>Window Inner Height: {windowHeight}</p>
       <p style={{background: "gray"}}>Window Outer Width: {windowOuterWidth}</p>
       <p style={{background: "peachpuff"}}>Window Outer Height: {windowOuterHeight}</p>
       <p style={{background: "lightgreen"}}>Window Document: {windowDocument}</p>
