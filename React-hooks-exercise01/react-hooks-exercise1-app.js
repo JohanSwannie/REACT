@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 function countInit() {
-  const array1 = [4, 22, 99, 3, 75, 35, 50, 17, 9, 61, 48, 28, 44, 13, 7, 39, 25, 73, 37, 31, 10, 88];
+  const array1 = [4, 22, 99, 3, 75, 35, 50, 17, 9, 61, 48, 28, 44, 13, 7, 39, 25,
+                  73, 37, 31, 10, 88, 103, 41, 99, 34, 20, 77, 19, 100, 23, 35];
   return array1[Math.floor(Math.random() * array1.length)];
 }
 
-const App = () => {
+export default function App() {
   const [counter1, setCounter1] = useState (() => countInit());
-  const array = useState(0);
+  const array = useState(5);
   const counter2 = array[0];
   const setCounter2 = array[1];
   const [state1, setState1] = useState({counter3: 71});
@@ -31,13 +32,25 @@ const App = () => {
   }
 
   function increaseCounter3() {
-    setState1(prevState1 => { return { prevState1, counter3: prevState1.counter3 + 3};});
+    setState1(prevState1 => {
+      return {
+        prevState1, counter3: prevState1.counter3 + 3
+      };
+    });
     setState2({color: colorWheel[Math.floor(Math.random() * colorWheel.length)]});
   }
 
   function increaseCounter4() {
-    setState(prevState => { return {...prevState, counter4: prevState.counter4 + 100};});
-    setState(prevState => { return {...prevState, color2: colorWheel[Math.floor(Math.random() * colorWheel.length)]};});
+    setState(prevState => {
+      return {
+        ...prevState, counter4: prevState.counter4 + 100
+      };
+    });
+    setState(prevState => {
+      return {
+        ...prevState, color2: colorWheel[Math.floor(Math.random() * colorWheel.length)]
+      };
+    });
   }
 
   useEffect(() => {
@@ -66,9 +79,7 @@ const App = () => {
       </div>
         <h5>{resourceType}</h5>
         {items.map(item => { return <pre key={item}>{JSON.stringify(item)}</pre> })}
-        <p style={{color: "navy", fontSize: "4.5rem", fontFamily: "Tangerine"}}>Swanneman Learns React Hooks</p>
+        <p style={{color: "navy", fontSize: "4rem", fontFamily: "Tangerine"}}>Swanneman Learns React Hooks</p>
     </div>
   );
 }
-
-export default App;
