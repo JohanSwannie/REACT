@@ -54,6 +54,6 @@ export default function App() {
 
 const tripleTheCount = (count) => {
   for (var i = 0; i < 1000000000000; i++) {
-    return count * 119;
+    return count * 3;
   }
 }
