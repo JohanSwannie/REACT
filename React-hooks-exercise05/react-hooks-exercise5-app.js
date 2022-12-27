@@ -23,7 +23,7 @@ export default function App() {
 
   const styleOfBox = useMemo(() => {
     return {
-      backgroundColor: darkTheme ? '#000' : 'darkkhaki',
+      backgroundColor: darkTheme ? '#000' : '#FFF',
       color: darkTheme ? '#FFF' : '#000'
     };
   }, [darkTheme]);
