@@ -17,7 +17,7 @@ export default function App() {
 
   const styleOfBody = useMemo(() => {
     return {
-      backgroundColor: darkTheme ? 'crimson' : 'lightblue',
+      backgroundColor: darkTheme ? 'rebeccapurple' : 'lightskyblue',
     };
   }, [darkTheme]);
 
@@ -28,25 +28,32 @@ export default function App() {
     };
   }, [darkTheme]);
 
+  const styleOfLabel = useMemo(() => {
+    return {
+      color: darkTheme ? '#FFF' : '#000',
+      fontSize: '28px'
+    };
+  }, [darkTheme]);
+
   const setMousePointer = () => {
     inputRef.current.focus();
   };
 
   return (
     <div style={styleOfBody} className="App">
-      <label>Counter: </label><br></br>
+      <label  style={styleOfLabel}>Counter: </label><br></br>
       <input ref={inputRef} type="number" value={counter} onChange={event => setCounter(parseInt(event.target.value))} /><br></br>
       <button onClick={() => setDarkTheme(prevDarkTheme => !prevDarkTheme)}>Change the Theme</button><br></br>
       <button onClick={() => setMessage(messages[Math.floor(Math.random() * messages.length)])}>Change the Message</button><br></br>
       <button onClick={setMousePointer}>Set Mouse Pointer</button><br></br>
       <h2 style={styleOfBox}>{tripleCount}</h2>
-      <h3>Message is {message}</h3>
+      <h3 style={styleOfBox}>Message is {message}</h3>
     </div>
   );
 }
 
 const tripleTheCount = (count) => {
   for (var i = 0; i < 1000000000000; i++) {
-    return count * 3;
+    return count * 119;
   }
 }
