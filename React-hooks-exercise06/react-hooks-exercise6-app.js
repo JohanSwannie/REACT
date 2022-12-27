@@ -10,7 +10,7 @@ export default function App() {
   function toggleTheme() {
     setDarkTheme(prevDarkTheme => !prevDarkTheme);
     setCounter(prevCounter => prevCounter + 1);
-    if (darkTheme) {
+    if (!darkTheme) {
       document.body.style.backgroundColor = 'lightseagreen';
       document.getElementById('butty').style.backgroundColor = 'navy';
       document.getElementById('butty').style.color = 'white';
