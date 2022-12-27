@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ClassComponentWithContext from './ClassComponentWithContext';
 import FunctionComponentWithContext from './FunctionComponentWithContext';
-import './App.css';
 
 export const ThemeContext = React.createContext();
 
