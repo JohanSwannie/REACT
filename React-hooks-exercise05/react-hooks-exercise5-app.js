@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useRef } from "react";
-import './App.css';
 
 export default function App() {
   const [counter, setCounter] = useState(0);
