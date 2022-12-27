@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useState, useRef } from "react";
 
   const Fillin = () => {
@@ -22,13 +21,13 @@ import React, { useState, useRef } from "react";
      changeCounter.current = changeCounter.current + 1;
      if (changeCounter.current % 2 === 0) {
        setSurname('Cooper');
-       h2Ref.current.style.background = "crimson";
+       h2Ref.current.style.background = "navy";
        h3Ref.current.style.border = "10px solid white";
        h3Ref.current.style.borderStyle = "double";
        setSport(sportChoice[Math.floor(Math.random() * sportChoice.length)]);
      } else {
        setSurname('Brown');
-       h2Ref.current.style.background = "navy";
+       h2Ref.current.style.background = "crimson";
        h3Ref.current.style.border = "none";
        setSport(sportChoice[Math.floor(Math.random() * sportChoice.length)]);
      }
