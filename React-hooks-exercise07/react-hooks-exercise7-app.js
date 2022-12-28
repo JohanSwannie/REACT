@@ -1,4 +1,3 @@
-import React from 'react';
 import FunctionContext from './FunctionContext';
 import { ConceptProvider } from './ConceptContext';
 
