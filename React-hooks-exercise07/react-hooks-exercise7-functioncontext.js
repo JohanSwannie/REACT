@@ -1,4 +1,3 @@
-import React from "react";
 import {ApplyConcept, ApplyConceptUpdate} from './ConceptContext';
 
 export default function FunctionContext() {
