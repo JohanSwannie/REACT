@@ -1,5 +1,12 @@
+* {
+  margin: 0;
+  left: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: aliceblue;
+  user-select: none;
 }
 
 .App {
@@ -7,17 +14,22 @@ body {
 }
 
 input {
-  width: 20%;
+  width: 40%;
   line-height: 2;
   background: navy;
   color: white;
   font-size: 19px;
   font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-button {
-  width: 20%;
-  padding: 1%;
+.hide {
+  width: 7.5vw;
+  border: none;
+}
+
+.show {
+  width: 7.5vw;
   background: crimson;
   color: #FFF;
   font-weight: bold;
