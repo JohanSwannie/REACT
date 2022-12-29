@@ -1,15 +1,16 @@
-import React from 'react';
 import { ACTIONS } from './App';
 
 export default function Execution({ execution, dispatch }) {
 
   return (
     <div>
-      <span style={{fontSize: '28px', fontWeight: 'bold', color: execution.done ? 'navy' : 'crimson', fontFamily: execution.done ? 'Sofia' : 'Tangerine'}}>{execution.name}</span>
-      <div style={{display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gridColumnGap: '4%', marginLeft: '28%'}}>
-        <button onClick={() => dispatch({ type: ACTIONS.TOGGLE_EXECUTION, loading: { id: execution.id }})}>Toggle</button>
-        <button onClick={() => dispatch({ type: ACTIONS.DELETE_EXECUTION, loading: { id: execution.id }})}>Delete</button>
+      <div style={{display: 'grid', gridTemplateColumns: 'repeat(5, 12fr)', margin: 'auto'}}>
+          <button className='hide'></button>
+          <button className='show' onClick={() => dispatch({ type: ACTIONS.TOGGLE_EXECUTION, stack: { id: execution.id }})}>Toggle</button>
+          <span style={{width: '70vw', fontSize: '37px', fontWeight: 'bold', textAlign: 'center', color: execution.done ? 'navy' : 'crimson', fontFamily: execution.done ? 'Sofia' : 'Tangerine'}}>{execution.name}</span>
+          <button className='show' onClick={() => dispatch({ type: ACTIONS.DELETE_EXECUTION, stack: { id: execution.id }})}>Delete</button>
+          <button className='hide'></button>
       </div>
     </div>
-  )
+  );
 }
