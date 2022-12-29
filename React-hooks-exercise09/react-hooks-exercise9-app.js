@@ -1,6 +1,5 @@
-import React, { useState, useReducer } from 'react';
+import { useState, useReducer } from 'react';
 import Execution from './Execution';
-import './App.css';
 
 export const ACTIONS = {
   ADD_EXECUTION: 'add_execution',
@@ -11,18 +10,18 @@ export const ACTIONS = {
 function reducer(executions, action) {
   switch (action.type) {
     case ACTIONS.ADD_EXECUTION:
-      return [...executions, newExecution(action.loading.name)];
+      return [...executions, newExecution(action.stack.name)];
     case ACTIONS.TOGGLE_EXECUTION:
       return executions.map(execution => {
-        if (execution.id === action.loading.id) {
+        if (execution.id === action.stack.id) {
           return {...execution, done: !execution.done};
         }
         return execution;
-      })
+      });
       case ACTIONS.DELETE_EXECUTION:
-        return executions.filter(execution => execution.id !== action.loading.id);
+        return executions.filter(execution => execution.id !== action.stack.id);
     default:
-      return executions;
+      return {...executions};
   }
 }
 
@@ -36,14 +35,14 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch({ type: ACTIONS.ADD_EXECUTION, loading: {name: name} });
+    dispatch({ type: ACTIONS.ADD_EXECUTION, stack: {name: name} });
     setName('');
   }
 
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <input type="text" value={name} placeholder="Enter Name" onChange={event => setName(event.target.value)} />
+        <input type="text" value={name} placeholder="Enter Text" onChange={event => setName(event.target.value)} />
       </form>
         {executions.map(execution => {
           return <Execution key={execution.id} execution={execution} dispatch={dispatch} />
