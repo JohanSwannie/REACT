@@ -10,7 +10,7 @@ export const ACTIONS = {
 function reducer(executions, action) {
   switch (action.type) {
     case ACTIONS.ADD_EXECUTION:
-      return [...executions, newExecution(action.stack.name)];
+      return [...executions, newExecution(action.stack.enteredText)];
     case ACTIONS.TOGGLE_EXECUTION:
       return executions.map(execution => {
         if (execution.id === action.stack.id) {
@@ -25,24 +25,24 @@ function reducer(executions, action) {
   }
 }
 
-function newExecution(name) {
-  return { id: Date.now(), name: name, done: false };
+function newExecution(enteredText) {
+  return { id: Date.now(), enteredText: enteredText, done: false };
 }
 
 export default function App() {
   const [executions, dispatch] = useReducer(reducer, []);
-  const [name, setName] = useState('');
+  const [enteredText, setEnteredText] = useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
-    dispatch({ type: ACTIONS.ADD_EXECUTION, stack: {name: name} });
-    setName('');
+    dispatch({ type: ACTIONS.ADD_EXECUTION, stack: {enteredText: enteredText} });
+    setEnteredText('');
   }
 
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <input type="text" value={name} placeholder="Enter Text" onChange={event => setName(event.target.value)} />
+        <input type="text" value={enteredText} placeholder="Enter Text" onChange={event => setEnteredText(event.target.value)} />
       </form>
         {executions.map(execution => {
           return <Execution key={execution.id} execution={execution} dispatch={dispatch} />
