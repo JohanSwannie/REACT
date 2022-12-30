@@ -7,5 +7,13 @@ export default function DisplayArray({ setDigits }) {
     setArrayOfDigits(setDigits(4));
   }, [setDigits]);
 
-   return arrayOfDigits.map(number => <div key={number}>{number}</div>)
+   return (
+     <div>
+      <ul>
+     {arrayOfDigits.map(number => {
+      return <li key={number}style={{listStyle: 'none'}}>{number}</li>
+     })}
+      </ul>
+    </div>)
+
 };
