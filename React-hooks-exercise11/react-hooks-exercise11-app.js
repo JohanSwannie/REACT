@@ -1,12 +1,11 @@
-import React, { useState, useTransition } from 'react';
-import './App.css';
+import { useState, useTransition } from 'react';
 
-function App() {
+export default function App() {
   const [isPending, startTransition] = useTransition();
   const [myInput, setMyInput] = useState('');
   const [array, setArray] = useState([]);
 
-  const ARRAY_LENGTH = 50000;
+  const ARRAY_LENGTH = 15000;
 
   function handleChange(event) {
     event.preventDefault();
@@ -29,5 +28,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
