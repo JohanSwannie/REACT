@@ -1,6 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import DisplayArray from './DisplayArray';
-import './App.css';
 
 export default function App() {
   const [digit, setDigit] = useState(1);
@@ -17,7 +16,8 @@ export default function App() {
 
   const setThemeStyle = {
     color: darkTheme ? '#FFF' : '#000',
-    backgroundColor: darkTheme ? '#000' : 'lightseagreen'
+    backgroundColor: darkTheme ? 'navy' : 'lightseagreen',
+    fontSize: darkTheme ? '1.5rem' : '1rem'
   };
 
   function handleInput(event) {
