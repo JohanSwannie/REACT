@@ -7,8 +7,8 @@ export default function App() {
 
   const setDigits = useCallback((multiplier) => {
     if (!isNaN(digit) && digit > 0) {
-      return [digit, digit * multiplier, (digit * 2) * multiplier, (digit * 4)  * multiplier,
-              (digit * 6) * multiplier, (digit * 8) * multiplier, (digit * 10) * multiplier];
+      return [digit, digit * multiplier, ((digit * 2) * multiplier), ((digit * 4)  * multiplier),
+             ((digit * 6) * multiplier), ((digit * 8) * multiplier), ((digit * 10) * multiplier)];
     } else {
       return ['Enter a valid Numeric value please!'];
     }
@@ -30,7 +30,10 @@ export default function App() {
       <input type="number" value={digit} onChange={handleInput} />
       <button onClick={() => setDarkTheme(prevDarkTheme => !prevDarkTheme)}>Toggle Theme</button>
       <DisplayArray setDigits={setDigits} />
-      <img src="https://img.freepik.com/premium-vector/math-background_23-2148147194.jpg?w=2000" alt="Maths" style={{width: "50vw"}} />
+      {darkTheme ?
+         <img src="https://img.freepik.com/premium-vector/math-background_23-2148147194.jpg?w=2000" alt="Maths2" /> :
+         <img src="https://t3.ftcdn.net/jpg/04/05/80/88/360_F_405808828_lwfcYW72K3i3IsZQayyHg9kEqHpRrrET.jpg" alt="Maths1" />
+      }
     </div>
   );
 }
