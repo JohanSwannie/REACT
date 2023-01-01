@@ -62,6 +62,8 @@ export default function App() {
     event.preventDefault();
     setShowAmount(event.target.value);
     inputChangeAmount.current ++;
+    chosenFontFamily = fontFamilyArray[Math.floor(Math.random() * fontFamilyArray.length)];
+    reffy.current.style.fontFamily = chosenFontFamily;
   }
 
   let chosenFontFamily = '';
@@ -86,7 +88,6 @@ export default function App() {
     setInputArray([]);
     setInputValue('');
     document.getElementById('inputBox').focus();
-    inputChangeAmount.current ++;
   }
 
   function handleSubmit(event) {
@@ -96,6 +97,8 @@ export default function App() {
       setEnteredText('');
     }
     inputChangeAmount.current ++;
+    chosenFontFamily = fontFamilyArray[Math.floor(Math.random() * fontFamilyArray.length)];
+    reffy.current.style.fontFamily = chosenFontFamily;
   }
 
   const reffyStyle = {
@@ -140,10 +143,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <p ref={reffy} style={reffyStyle}>Input Boxes Have Been Changed {inputChangeAmount.current} Times</p>
+      <p ref={reffy} style={reffyStyle}>Input Boxes Has Been Changed {inputChangeAmount.current} Times</p>
       <div style={arrangeStyle}>
         <input className="inputBox" type="number" placeholder="Enter Number Here" style={inputStyle} onChange={handleChange1} />
-        <p style={{fontSize: '17px'}}> Calculated Result >>>>>>>> </p>
+        <p style={{fontSize: '17px', color: '#FFF', fontWeight: 'bold'}}> Calculated Result >>>>>>>> </p>
         <p style={showAmountStyle}>{calculatedAmount}</p>
       </div>
       <form onSubmit={handleSubmit}>
