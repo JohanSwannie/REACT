@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lightgray;
+  user-select: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.hide {
+  width: 7.5vw;
+  border: none;
+}
+
+.show, .show2 {
+  width: 7.5vw;
+  background: crimson;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.show2 {
+  width: 16vw;
+  height: 5vh;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+#textInput {
+  width: 40%;
+  line-height: 2;
+  background: navy;
+  color: white;
+  font-size: 19px;
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+
+#textInput ::placeholder {
+  color: #FFF;
+  font-weight: bold;
+  opacity: .45;
+}
+
+li {
+  font-size: 16px;
+  list-style: none;
+}
+
+em, b {
+  width: 24vw;
+  border: .1px solid #FFF;
+  padding: 3px;
+}
+
+.inputBox ::placeholder {
+  color: #000;
+  font-weight: bold;
+  opacity: .45;
+}
