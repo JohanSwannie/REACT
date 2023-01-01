@@ -16,6 +16,7 @@ body {
 .hide {
   width: 7.5vw;
   border: none;
+  background: #000;
 }
 
 .show, .show2 {
