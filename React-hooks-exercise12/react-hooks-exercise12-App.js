@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useTransition, useMemo, useReducer } from 'react';
 import DataArray from './DataArray';
-import Executions from './Executions';
+import RestExecutions from './RestExecutions';
 
 export const ACTIONS = {
   ADD_EXECUTION: 'ADD_EXECUTION',
@@ -44,7 +44,9 @@ export default function App() {
   const [isPending, startTransition] = useTransition();
   const [executions, dispatch] = useReducer(reduceThem, []);
 
-  const colorArray = ['red', 'blue', 'green', 'orange', 'olive', 'rebeccapurple', 'steelblue', 'crimson', 'peachpuff'];
+  const fontFamilyArray = ["'Tangerine', cursive", "'Sofia', cursive", "'Roboto', sans-serif", "'Lobster', cursive",
+                           "'Shadows Into Light', cursive", "'Acme', sans-serif", "'Share Tech Mono', monospace",
+                           "'Aladin', cursive", "'Sirin Stencil', cursive"];
 
   useEffect(() => {
     fetch('https://gist.githubusercontent.com/JohanSwannie/6f6b9a63c7962fd39a18493d2f31b622/raw/827d2a30305308cbe356a09df16342c6e8d081a8/musicpieces.json')
@@ -62,15 +64,15 @@ export default function App() {
     inputChangeAmount.current ++;
   }
 
-  let chosenColor = '';
+  let chosenFontFamily = '';
   const inputLength = 20000;
 
   function handleChange2(event) {
     event.preventDefault();
     setInputValue(event.target.value);
     inputChangeAmount.current ++;
-    chosenColor = colorArray[Math.floor(Math.random() * colorArray.length)];
-    reffy.current.style.color = chosenColor;
+    chosenFontFamily = fontFamilyArray[Math.floor(Math.random() * fontFamilyArray.length)];
+    reffy.current.style.fontFamily = chosenFontFamily;
     startTransition(() => {
       let inputList = [];
       for (var i = 0; i < inputLength; i++) {
@@ -97,8 +99,11 @@ export default function App() {
   }
 
   const reffyStyle = {
-    fontSize: '1.2rem',
-    fontWeight: 'bold'
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    color: '#FFF',
+    letterSpacing: '.25rem',
+    wordSpacing: '.85rem'
   };
 
   const arrangeStyle = {
@@ -146,14 +151,14 @@ export default function App() {
       </form>
       <button className='show2' onClick={() => dispatch({ type: ACTIONS.DELETE_ALL_EXECUTIONS, stack:{id: ''}})}>Delete All Executions</button>
       {executions.map(execution => {
-        return <Executions key={execution.id} execution={execution} dispatch={dispatch} />
+        return <RestExecutions key={execution.id} execution={execution} dispatch={dispatch} />
       })}
       <DataArray dataArray={dataArray} />
       <input className='inputBox' type="text" value={inputValue} placeholder="Enter Text Here" style={inputStyle} onChange={handleChange2} />
       <button style={buttonStyle} onClick={handleButtonClick}>Click to Delete Input Array</button>
-      {isPending ? 'Input is loading - Please wait patiently ...' :
+      {isPending ? <span style={{color: '#FFF', fontWeight: 'bold'}}>  --- Input is loading - Please wait patiently ...</span> :
         inputArray.map((item, index) => {
-        return <p key={index}>{item}</p>
+        return <p key={index} style={{color: '#FFF'}}>{item}</p>
       })}
     </div>
   );
