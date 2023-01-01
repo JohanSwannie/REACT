@@ -140,7 +140,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <p ref={reffy} style={reffyStyle}>The Application Has Been Rendered {inputChangeAmount.current} Times</p>
+      <p ref={reffy} style={reffyStyle}>Input Boxes Have Been Changed {inputChangeAmount.current} Times</p>
       <div style={arrangeStyle}>
         <input className="inputBox" type="number" placeholder="Enter Number Here" style={inputStyle} onChange={handleChange1} />
         <p style={{fontSize: '17px'}}> Calculated Result >>>>>>>> </p>
