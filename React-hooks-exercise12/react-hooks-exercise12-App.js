@@ -133,6 +133,24 @@ export default function App() {
     border: '3px solid #FFF'
   };
 
+  const showMessageStyle = {
+    fontSize: '17px',
+    color: '#FFF',
+    fontWeight: 'bold',
+    lineHeight: '3',
+    border: '2px solid #FFF',
+    background: '#000',
+    padding: '.3rem'
+  };
+
+  const transitionMessageStyle = {
+    color: '#FFF',
+    fontWeight: 'bold',
+    border: '2px solid #FFF',
+    padding: '.3rem',
+    background: '#000'
+  };
+
   const buttonStyle = {
     backgroundColor: 'crimson',
     color: '#FFF',
@@ -146,7 +164,7 @@ export default function App() {
       <p ref={reffy} style={reffyStyle}>Input Boxes Has Been Changed {inputChangeAmount.current} Times</p>
       <div style={arrangeStyle}>
         <input className="inputBox" type="number" placeholder="Enter Number Here" style={inputStyle} onChange={handleChange1} />
-        <p style={{fontSize: '17px', color: '#FFF', fontWeight: 'bold'}}> Calculated Result >>>>>>>> </p>
+        <p style={showMessageStyle}> Calculated Result >>>>>>>> </p>
         <p style={showAmountStyle}>{calculatedAmount}</p>
       </div>
       <form onSubmit={handleSubmit}>
@@ -159,9 +177,9 @@ export default function App() {
       <DataArray dataArray={dataArray} />
       <input className='inputBox' type="text" value={inputValue} placeholder="Enter Text Here" style={inputStyle} onChange={handleChange2} />
       <button style={buttonStyle} onClick={handleButtonClick}>Click to Delete Input Array</button>
-      {isPending ? <span style={{color: '#FFF', fontWeight: 'bold'}}>  --- Input is loading - Please wait patiently ...</span> :
+      {isPending ? <span style={transitionMessageStyle}>  --- Input is loading - Please wait patiently ...</span> :
         inputArray.map((item, index) => {
-        return <p key={index} style={{color: '#FFF'}}>{item}</p>
+        return <p key={index} style={transitionMessageStyle}>{item}</p>
       })}
     </div>
   );
