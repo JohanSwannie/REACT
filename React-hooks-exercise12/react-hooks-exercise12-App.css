@@ -52,6 +52,7 @@ body {
 li {
   font-size: 16px;
   list-style: none;
+  margin-bottom: 1rem;
 }
 
 em, b {
