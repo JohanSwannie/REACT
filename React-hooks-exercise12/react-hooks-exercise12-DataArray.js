@@ -44,7 +44,6 @@ export default function DataArray({dataArray}) {
                 {index === 6 && <audio src={bdPiece} controls />}
                 {index === 7 && <audio src={boPiece} controls />}
             </li>
-          <br></br>
         </ul>
       })}
       </div>
