@@ -136,8 +136,8 @@ class TicTacToeGame extends Component {
       <div className="tic_Tac_Toe_Game">
         <div>
           <Board
-            squares={current.squares}
-            onClick={i => this.handleClick(i)}
+            squares={current.squares} 
+            onClick={i => this.handleClick(i)} 
           />
         </div>
         <div className="information_detail">
