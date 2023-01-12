@@ -7,7 +7,26 @@ body {
 }
 
 input {
-  background: crimson;
+  width: 60vw;
+  height: 5vh;
+  background: steelblue;
   color: #FFF;
+  font-size: 30px;
   font-weight: bold;
+  margin-top: 1rem;
+}
+
+button {
+  width: 10vw;
+  height: 5vh;
+  background: red;
+  color: #FFF;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 2rem;
+}
+
+::placeholder {
+  color: #FFF;
+  opacity: 0.75;
 }
