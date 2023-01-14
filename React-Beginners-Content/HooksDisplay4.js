@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const HooksDisplay4 = () => {
+export default function HooksDisplay4() {
   const [data1, setData1] = useState("");
   const [data2, setData2] = useState("");
 
@@ -41,5 +41,3 @@ const HooksDisplay4 = () => {
     </div>
   )
 };
-
-export default HooksDisplay4;
