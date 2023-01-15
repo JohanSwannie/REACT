@@ -1,0 +1,17 @@
+
+.search-box {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 15rem;
+    line-height: 30px;
+    margin: 0 0 1rem;
+    background: #c6ebcb;
+    color: #000;
+    font-weight: bold;
+    outline: .6rem solid grey;
+    outline-style: double;
+    margin-bottom: 1rem;
+  }
+  
