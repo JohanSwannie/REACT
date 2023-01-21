@@ -2,7 +2,7 @@ import React from 'react';
 import './card.styles.css';
 
 const Card = ({cat}) => {
-    const { id, name, email } = cat;
+    const { id, name, email } = cat;  
     return (
         <div className="card-container" key={id}>
             <img 
