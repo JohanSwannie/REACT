@@ -6,7 +6,7 @@
     background-color: #c6ebcb;
     border: .25rem solid grey;
     border-radius: 5px;
-    padding: 25px;
+    padding: 24px;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.4s ease-out;
