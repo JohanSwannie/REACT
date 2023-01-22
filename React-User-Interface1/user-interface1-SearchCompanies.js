@@ -50,7 +50,7 @@ const SearchCompanies = ({ searchQuery, onSearchQueryChange, orderBy, onOrderByC
             <DropDownMenu toggleSort={toggleSort}
             orderBy={orderBy}
             onOrderByChange={newSortOrder => onOrderByChange(newSortOrder)}
-            sortBy={sortBy}
+            sortBy={sortBy} 
             onSortByChange={newSort => onSortByChange(newSort)}
             />
           </div>
